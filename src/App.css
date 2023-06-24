@@ -9,6 +9,11 @@
   margin: 0rem;
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
+  /* background-color: #F6F7F7; */
+}
+body{
+  background-color: #F6F7F7;
+
 }
 
 .product-card {
@@ -53,28 +58,95 @@
   color: #ff6600;
 }
 
-@media (min-width: 768px) {
-  .product-card {
-    flex-direction: row;
-  }
-
-  .product-card img {
-    width: 40%;
-  }
-
-  .product-card .product-info {
-    padding: 16px 24px;
-  }
-
-  .product-card .product-info h3 {
-    font-size: 20px;
-  }
-
-  .product-card .product-info p {
-    font-size: 16px;
-  }
-}
 
 .product-container{
   display: flex;
+  text-align: left;
+  padding: 1rem;
+  margin: 1rem;
+  width: 600px;
+  justify-content: center;
+  /* background-color: white; */
+}
+
+  .container {
+            display: flex;
+            height: 100vh; /* Adjust as needed */
+        }
+
+        .sidebar {
+            flex-basis: 20%; /* Adjust the width as needed */
+            background-color: #F6F7F7;
+        }
+
+        .content {
+            flex-grow: 1;
+             background-color: #F6F7F7
+
+        }
+
+        .sidebar {
+            flex-basis: 20%; /* Adjust the width as needed */
+            background-color: #f1f1f1;
+        }
+
+        .sidebar-container{
+    display: flex;
+    flex-direction: column;
+
+  
+}
+
+.sidebar-items li{
+    margin:1rem;
+    list-style-type: none;
+    font-size: 18px;
+    line-height: 40px;
+    display: flex;
+    padding: 0.5rem;
+   border-radius: 5px;
+}
+
+.sidebar-items li i {
+    position: relative;
+    top: 19px;
+    padding-right: 1rem;
+
+}
+.sidebar-items li:hover{
+    /* background-color: whitesmoke; */
+    cursor: pointer;
+    transition: 0.25s;
+    /* padding: 1rem; */
+}
+
+.icons-container{
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem;
+  margin: 1rem;
+}
+.product-info{
+  background-color: white;
+}
+.tags {
+ display: flex;
+ flex-direction: row;
+  margin: 0.5rem;
+ 
+}
+.tags p {
+  padding: 5px;
+  border:none;
+  border-radius: 5px;
+  margin: 1rem;
+  font-weight: bold;
+  background-color: rgba(128, 128, 128, 0.192);
+}
+
+.votes-btn{
+  font-size: 25px;
+}
+.votes-btn:hover{
+  cursor: pointer;
 }

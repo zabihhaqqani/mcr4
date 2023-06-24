@@ -2,11 +2,11 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { forumData } from "../../pages/data";
 import { useDataContext } from "../context/context";
+import CommentCard from "../comment/comment";
 
-
-function ProductCard({item}) {
+function Comments({ item }) {
   const { dataDispatch, commentHandler } = useDataContext();
-  
+
   const {
     postId,
     username,
@@ -21,14 +21,12 @@ function ProductCard({item}) {
     comments,
     isBookmarked,
   } = item;
-  
+
   const [isBookmarkeds, setIsBookmarkeds] = useState(isBookmarked);
 
+    const [votes, setVotes] = useState(upvotes - downvotes);
 
-  const [votes,setVotes] = useState(upvotes-downvotes)
-
- 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   return (
     <div className="product-container">
       <div className="product-card">
@@ -98,10 +96,13 @@ function ProductCard({item}) {
               ></i>
             )}
           </div>
+          {comments?.map((item) => (
+            <CommentCard key={item.commentId} data={item} />
+          ))}
         </div>
       </div>
     </div>
   );
 }
 
-export default ProductCard;
+export default Comments;

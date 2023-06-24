@@ -10,7 +10,7 @@ function App() {
     <NavBar/>
       <Routes>
         <Route path="/" element={<LandingPage />} />
-        <Route path="/page" element={<Page />} />
+        <Route path="/comments" element={<Page />} />
       </Routes>
     </div>
   );
